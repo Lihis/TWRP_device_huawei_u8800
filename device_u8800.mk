@@ -25,4 +25,4 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/u8800/overlay
 # Files needed for recovery image
 PRODUCT_COPY_FILES += \
   device/huawei/u8800/recovery/sbin/rmt_storage:/recovery/root/sbin/rmt_storage \
-  device/huawei/u8800/ueventd.rc:/recovery/root/ueventd.rc
+  device/huawei/u8800/ueventd.rc:/recovery/root/ueventd.huawei.rc
