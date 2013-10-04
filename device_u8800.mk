@@ -16,18 +16,17 @@
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit u8815 vendor setup
-$(call inherit-product-if-exists, vendor/huawei/u8815/u8815-vendor.mk)
+# Inherit u8800 vendor setup
+$(call inherit-product-if-exists, vendor/huawei/u8800/u8800-vendor.mk)
 
 # Path to overlay files
-DEVICE_PACKAGE_OVERLAYS += device/huawei/u8815/overlay
+DEVICE_PACKAGE_OVERLAYS += device/huawei/u8800/overlay
 
 # Files needed for recovery image
 PRODUCT_COPY_FILES += \
-  device/huawei/u8815/recovery/sbin/charge_recovery:/recovery/root/sbin/charge_recovery \
-  device/huawei/u8815/recovery/sbin/rmt_storage_recovery:/recovery/root/sbin/rmt_storage_recovery \
-device/huawei/u8815/recovery/sbin/rmt_oeminfo_recovery:/recovery/root/sbin/rmt_oeminfo_recovery \
-device/huawei/u8815/recovery/sbin/linker:/recovery/root/sbin/linker \
-  device/huawei/u8815/recovery/sbin/libhwrpc.so:/recovery/root/sbin/libhwrpc.so \
-  device/huawei/u8815/recovery/sbin/liboeminfo.so:/recovery/root/sbin/liboeminfo.so \
-  device/huawei/u8815/recovery/sbin/charge.sh:/recovery/root/sbin/charge.sh
+  device/huawei/u8800/recovery/sbin/charge_recovery:/recovery/root/sbin/charge_recovery \
+  device/huawei/u8800/recovery/sbin/rmt_storage_recovery:/recovery/root/sbin/rmt_storage_recovery \
+  device/huawei/u8800/recovery/sbin/rmt_oeminfo_recovery:/recovery/root/sbin/rmt_oeminfo_recovery \
+  device/huawei/u8800/recovery/sbin/libhwrpc.so:/recovery/root/sbin/libhwrpc.so \
+  device/huawei/u8800/recovery/sbin/liboeminfo.so:/recovery/root/sbin/liboeminfo.so \
+  device/huawei/u8800/recovery/sbin/charge.sh:/recovery/root/sbin/charge.sh

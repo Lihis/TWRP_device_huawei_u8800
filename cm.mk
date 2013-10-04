@@ -5,11 +5,11 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration.
-$(call inherit-product, device/huawei/u8815/device_u8815.mk)
+$(call inherit-product, device/huawei/u8800/device_u8800.mk)
 
 # Device identifier.
-PRODUCT_DEVICE := u8815
-PRODUCT_NAME := cm_u8815
+PRODUCT_DEVICE := u8800
+PRODUCT_NAME := cm_u8800
 PRODUCT_BRAND := huawei
-PRODUCT_MODEL := Ascend G300
+PRODUCT_MODEL := Ideos X5
 PRODUCT_MANUFACTURER := huawei
