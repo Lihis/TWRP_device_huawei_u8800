@@ -24,9 +24,5 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/u8800/overlay
 
 # Files needed for recovery image
 PRODUCT_COPY_FILES += \
-  device/huawei/u8800/recovery/sbin/charge_recovery:/recovery/root/sbin/charge_recovery \
-  device/huawei/u8800/recovery/sbin/rmt_storage_recovery:/recovery/root/sbin/rmt_storage_recovery \
-  device/huawei/u8800/recovery/sbin/rmt_oeminfo_recovery:/recovery/root/sbin/rmt_oeminfo_recovery \
-  device/huawei/u8800/recovery/sbin/libhwrpc.so:/recovery/root/sbin/libhwrpc.so \
-  device/huawei/u8800/recovery/sbin/liboeminfo.so:/recovery/root/sbin/liboeminfo.so \
-  device/huawei/u8800/recovery/sbin/charge.sh:/recovery/root/sbin/charge.sh
+  device/huawei/u8800/recovery/sbin/rmt_storage:/recovery/root/sbin/rmt_storage \
+  device/huawei/u8800/ueventd.rc:/recovery/root/ueventd.rc
