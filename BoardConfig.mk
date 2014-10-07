@@ -14,21 +14,24 @@
 # limitations under the License.
 #
 
-TARGET_OTA_ASSERT_DEVICE := hwu8800,u8800,hwu8800,u8800
+TARGET_OTA_ASSERT_DEVICE := u8800,U8800
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := u8800
-TARGET_BOARD_PLATFORM := msm7x30
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Architecture
+TARGET_BUILD := release
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_BOARD_PLATFORM := msm7x30
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := scorpion
+TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CORTEX_CACHE_LINE_32 := true
 
@@ -58,16 +61,11 @@ BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_INSTALLER_CMDLINE := $(BOARD_KERNEL_CMDLINE)
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8800/kernel
-TARGET_PREBUILT_KERNEL := device/huawei/u8800/kernel
-
-# USB Mounting
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun
-TARGET_USE_CUSTOM_SECOND_LUN_NUM := 2
-BOARD_UMS_LUNFILE := /sys/devices/platform/msm_hsusb/gadget/lun0/file
-BOARD_VOLD_MAX_PARTITIONS := 20
+TARGET_KERNEL_SOURCE := kernel/huawei/android_huawei_kernel
+TARGET_KERNEL_CONFIG := jellytime_recovery_defconfig
 
 # Recovery
+TW_USE_TOOLBOX := false
 TW_NO_REBOOT_BOOTLOADER := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_INITRC := device/huawei/u8800/init.rc
@@ -94,3 +92,6 @@ BOARD_HAS_NO_REAL_SDCARD := false
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_RECOVERY_RMT_STORAGE := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8800/recovery/graphics.c

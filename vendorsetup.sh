@@ -14,5 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_u8800-userdebug
-add_lunch_combo cm_u8800-userdebug
+add_lunch_combo u8800-userdebug
