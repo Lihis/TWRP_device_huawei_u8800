@@ -1,4 +1,4 @@
-# Copyright (C) 2011 The Android Open Source Project
+# Copyright (C) 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,3 +32,6 @@ device/huawei/u8800/recovery/sbin/charge.sh:/recovery/root/sbin/charge.sh \
 device/huawei/u8800/init.recovery.huawei.rc:root/init.recovery.huawei.rc \
 device/huawei/u8800/default.prop:root/default.prop \
 device/huawei/u8800/ueventd.huawei.rc:/recovery/root/ueventd.huawei.rc
+
+# \
+# device/huawei/u8800/recovery/tp/1191601.img:root/tp/1191601.img
