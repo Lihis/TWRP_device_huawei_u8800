@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-TARGET_OTA_ASSERT_DEVICE := u8800,U8800
+TARGET_OTA_ASSERT_DEVICE := hwu8800,u8800,hwu8800,u8800
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
 # Platform
@@ -96,3 +96,4 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_RECOVERY_RMT_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8800/recovery/recovery_keys.c
